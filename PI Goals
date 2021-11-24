@@ -1,6 +1,110 @@
 
+PI: PI-15
+No.	Workstream	PI Goal	Objective / Epic	Success Measured By	Confidence	Last Updated
+1.1	Reference Architecture	Deliver the Reference Architecture that influences V2 alpha definition of done	Finalize documentation for a future facing modular extensible architecture and publish it.	A new zone in Github dedicated to the created v1.0 reference architecture content	90	2021-09-06
+1.1	Reference Architecture	Deliver the Reference Architecture that influences V2 alpha definition of done	Deliver Initial documented versions of the foundational cross-cutting concerns: security, auditing and platform configuration	Documentation published to Mojaloop v1.0
 
-<iframe src="https://coda.io/embed/l16Ws2mGpP/_sutze?viewMode=embedplay" width=900 height=1800 style="max-width: 100%;" allow="fullscreen"></iframe>
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMxNDQwOTM4XX0=
--->
+The Published Documentation	70	2021-09-15
+1.1	Reference Architecture	Deliver the Reference Architecture that influences V2 alpha definition of done	Document the resourcing asks for Alpha build	a written resource in github that showcases what skills and people and teams needed to make this happen.
+
+if it is possible to make it fit in small 2 week level of volunteer efforts - even better	30	2021-09-15
+1.1	Hub v2 Build	Deliver the Alpha release of V2	Deliver the initial versions of the main Bounded Contexts - happy path only and stable interfaces: 
+
+One epic per Bounded context: Interop, Participants, Transfers, Accounts & Balances, Quotes, Lookups, Settlements, Notifications and Scheduling	scope is here for alpha:
+https://docs.google.com/spreadsheets/d/1ITmAesHjRZICC0EUNV8vUVV8VDnKLjbSKu_dzhEa5Fw/edit?usp=sharing
+
+
+Feedback from Product Council:
+* Envision what the next community event presentation will ideally showcase. a new github repository structure?  A couple of new postman testscripts in TTK per Bounded Context?	0	2021-09-06
+1.1	Hub v2 Build	Deliver the Alpha release of V2	Deliver the initial versions of the main Cross-cutting Concerns BCs (1 epic per BC)		0	2021-09-01
+1.1	Hub v2 Build	Deliver the Alpha release of V2	Deliver the plan for the next release		10	2021-09-01
+1.2	v1 Hub Operations Improvement (“Business Operations Framework”)	Definition of the Role Based Access Control (RBAC) approach to Operational API to access functionality and demonstration of front-end strategy	See Audit Trail:
+[stretch] As a compliance officer I access the audit trail of operator activities	Acceptance Criteria is using APIs:
+* Add user (epic 2), execute action (epic 3 & 4), see audit trail (epic 1)
+* User is denied access to an API call, and that is audited (via UI and direct API access)
+
+[Stretch] Demonstration of how the Audit Trail for hub operators can be accessed & demonstration of a portal that implements the RBAC demonstrating how to access the audit trail from above test cases.	20	2021-09-06
+1.2	v1 Hub Operations Improvement (“Business Operations Framework”)	Definition of the Role Based Access Control (RBAC) approach to Operational API to access functionality and demonstration of front-end strategy	Add User:
+As a hub operator I can define the role based policy that a DFSP can use to access settlement reports and reconciliation via an API	1. Demonstration of a DFSP portal that implements the RBAC demonstrating how a DFSP can access to settlement reconciliation reports.
+2. PC - accepted Initial Business Process documentation and RBAC design. 
+3. DA - agreed to technical design of the framework	70	2021-09-06
+1.2	v1 Hub Operations Improvement (“Business Operations Framework”)	Definition of the Role Based Access Control (RBAC) approach to Operational API to access functionality and demonstration of front-end strategy	Execute Action:
+As a DFSP I can obtain the settlement reconciliation report directly from the hub
+	Acceptance Criteria:
+* DFSP operator and Hub Operator able to access recon. report via a central API and have that access logged in the operator audit trail	10	2021-09-06
+1.2	v1 Hub Operations Improvement (“Business Operations Framework”)	Definition of the Role Based Access Control (RBAC) approach to Operational API to access functionality and demonstration of front-end strategy	Execute Action:
+As a hub operator I can trace a transfer from beginning to end including settlement in order to deal with a dispute effectively amongst other scenarios, seeing error messages chronologically.	Acceptance Criteria:
+* Hub Operator accesses a full transaction/transfer trace & that access is logged in the operator audit trail	90	2021-09-06
+1.4	Best Practice National RTP ISO20022 Messaging 	Have a demonstrable version of mojaloop which uses ISO20022 messages internally for P2P and P2B	ML Adapter changes at the Switch are designed for ISO20022 messaging compatibility	a design document is published with any hub changes documented as a requirements backlog.	30	2021-09-06
+1.4	Best Practice National RTP ISO20022 Messaging 	Have a demonstrable version of mojaloop which uses ISO20022 messages internally for P2P and P2B	Mappings for all 6 ISO messages to and from FSPIOP messages (”Rwanda Version”) documented	a playbook document / case study showing how a market is using ISO20022 alongside Mojaloop?	30	2021-09-01
+1.7	Hub v1 Maintenance: Devops, Quality, Testing, Release Management - v1	Publish Mojaloop release(s) v14 with major changes packaged; Support quality contributions into Mojaloop during PI15	Mojalop v13.0.1 well tested & published; In addition, make the regression test plan part of our documentation pack in human readable form	1. Mojalop v13.0.1 well tested & published 
+
+Note:
+* No major (critical path or functional) issues identified in ML release v13	90	2021-09-03
+1.7	Hub v1 Maintenance: Devops, Quality, Testing, Release Management - v1	Publish Mojaloop release(s) v14 with major changes packaged; Support quality contributions into Mojaloop during PI15	2. Mojaloop v14 published for adoption as a major, stable release & external dependencies separated out of Mojaloop helm charts to reduce future maintenance	1. External dependencies separated out of Mojaloop helm charts to reduce future maintenance
+2. Mojaloop helm v14 published for adoption as a major, stable release (until ML core v2is published)
+3. Ensure 3PPI functionality is part of v14 as a consequence (reviewing PRs, docs, tests & running them as part of release validation); 
+4. An environment running latest variant with all regression tests at use case level fully passing.
+5. A release note that clearly identifies all functional change
+
+NB: This will depend on contributions (PRs, etc) that add the 3PPI functionality to Mojaloop standard helm charts and accompanying tests with instructions.
+
+Risks / dependencies
+1. 3PPI features, tests need to be contributed and provided for review, to be able to be included in Mojaloop releases along with tests, baselines, instructions to run	70	2021-09-03
+1.7	Hub v1 Maintenance: Devops, Quality, Testing, Release Management - v1	Publish Mojaloop release(s) v14 with major changes packaged; Support quality contributions into Mojaloop during PI15	3. Support the sandbox team & IaC contribution team to work collaboratively and merge 3PPI into Rwanda to ensure they are working with the latest Mojaloop release in the sandbox, and running regression tests at use case level end to end, when that release is made, based on an OSS published regression test plan. 	Ensure 3PPI functionality is part of v14 as a consequence (reviewing PRs, docs, tests & running them as part of release validation);
+
+Support Rwanda team to deploy the developer portal into their sandbox.
+
+Risks / dependencies
+1. If Infrastructure as code (IAC) not contributed / not ready in OSS space for latest Mojaloop releases	30	2021-09-03
+2.2	Merchant Scheme Extension (inc ALS enhancement & QR Support)
+	Have a validated hypothesis for what might be the right set of modules in OSS 	4. Interoperable PayMe as a deliverable demo; merchant lifecycle management. Assets include flows, product assets etc.	sandbox showcases this use case end to end with use case artefacts using as-is codebase.
+
+UAT existing merchant scenarios fully & fact-find, alongside the sandbox/ttk team: 
+* does the data shows that this is a merchant transaction so that the scheme rules can treat merchant transactions differently	40	2021-09-08
+2.2	Merchant Scheme Extension (inc ALS enhancement & QR Support)
+	Have a validated hypothesis for what might be the right set of modules in OSS 	Merchant Lifecycle Management using Oracle API in first Instance
+
+
+	Write some base requirements for a merchant lifecycle management extension that would host extra data and manage merchants more fully as an oracle component, as an MVP that would help to validate thinking (see item 5 below) if resources can be found.
+
+in addition: Write a short document:
+* Questions to review: what do we need to know at the centre? Do we have the right data? 
+* Propose minimum set of data to do decent blocklisting
+* Understand gaps at the centre in processes around merchant lifecycle management (data)
+* If we use our oracle APIs as-is, what are the gaps - if any?	10	2021-09-08
+2.2	Merchant Scheme Extension (inc ALS enhancement & QR Support)
+	Have a validated hypothesis for what might be the right set of modules in OSS 	Demonstration of the blocklist - change the state to facilitate interdiction
+A - Actio do up date blocklist state
+B - (Hub/Discovery/other) to recognise state and interdict a transaction; identify best place for this
+
+	Goal is a paper that outlines choices, plus demo	20	2021-09-08
+2.2	Merchant Scheme Extension (inc ALS enhancement & QR Support)
+	Have a validated hypothesis for what might be the right set of modules in OSS 	3. Paper Proposal on the QR Code detailed thinking to be used:  
+* data embedded vs URL/URI, 
+* plus format for any embedded data; 
+* Need to also to support USSD.	A written paper delivered that can be reviewed at community level for feedback.		2021-09-01
+2.2	Merchant Scheme Extension (inc ALS enhancement & QR Support)
+	Have a validated hypothesis for what might be the right set of modules in OSS 	5. Roadtest our thinking at DFS Labs event to get more contribution	an event with the sandbox as a showcase and attendees actively providing focus group feedback on the role of Mojaloop and the design assets.		2021-09-01
+2.4	FX: Currency Conversion Better Core Support	Deliver API changes for FX support & core hub changes to support it to demonstrator level for key customer use cases.	API & Swagger definition changes are finalised	CCB have adopted the new API and it is published in the mojaloop github documentation.	90	2021-09-01
+2.4	FX: Currency Conversion Better Core Support	Deliver API changes for FX support & core hub changes to support it to demonstrator level for key customer use cases.	Hub changes are in a backlog ready for engineering	Github and/or Coda fully document the remainig work when contribution can be found.	80	2021-09-01
+2.4	FX: Currency Conversion Better Core Support	Deliver API changes for FX support & core hub changes to support it to demonstrator level for key customer use cases.	Key use case fully documented and demonstrable as a playbook use case	FXP Simulator via TTK, to show the API in action for key use cass	40	2021-09-01
+3.2	Mojaloop ISO20022 Data Adapter	Deliver a design and a first POC working code contribution from Actio team to adapt Mojaloop data to ISO20022 format. 	Design a Mojaloop ISO20022 Event Data Adapter	* Design proposed and agreed with DA for an event capture and ISO20022 adaptation
+* Events to be delivered agreed & documented in the design	100	2021-09-03
+3.2	Mojaloop ISO20022 Data Adapter	Deliver a design and a first POC working code contribution from Actio team to adapt Mojaloop data to ISO20022 format. 	Implement a Mojaloop ISO20022 Event Data Adapter	* Actio Transaction Monitoring Service API finalised
+* ISO20022-compliant ingress and egress messaging, data-flow and storage demonstrable
+* A working demo showcasing data being taken from kafka topics and delivered in ISO20022 format to Actio	60	2021-09-03
+4.1	Improve our “front of house”: API Documentation, Developer Portal, & Sandbox 	Support APIX Hackathon participants engage with RTP rails for G2P CDBC->DOMESTIC RTP use case in particular.	Derisk use of 3PPI API in B2B/G2P scenario for Hackathon Users.  Demonstrate G2P transaction injected via 3PPI, derisking this for all Cross-Network usage.	At least 1 hack participant at MAS event tries the API/Sandbox
+
+Make it simple for a hack participant to engage with their own phone number in the simulated environment to feel what a customer would experience. Not a real DFSP.	90	2021-09-03
+4.1	Improve our “front of house”: API Documentation, Developer Portal, & Sandbox 	Support APIX Hackathon participants engage with RTP rails for G2P CDBC->DOMESTIC RTP use case in particular.	Ensure 3PPI is fully documented use case in the Sandbox for P2P usage & simple to understand as an outsider.
+	We use this as our definition of done to showcase 3PPI in action for P2P and get an adopter engaged with what it takes to take it to market.	90	2021-09-03
+4.1	Improve our “front of house”: API Documentation, Developer Portal, & Sandbox 	Support APIX Hackathon participants engage with RTP rails for G2P CDBC->DOMESTIC RTP use case in particular.	Get underlying core hub populated with good data 	60 participants in a village with 4-5 different DFSPs all area able to interact.  Localised names, currencies etc - ficticious but not western.
+	60	2021-09-03
+4.1	Improve our “front of house”: API Documentation, Developer Portal, & Sandbox 	Support APIX Hackathon participants engage with RTP rails for G2P CDBC->DOMESTIC RTP use case in particular.	Ensure the ALS service completely demonstrates customer choice in action	use case documents make sense to hack participants as self-service access.	60	2021-09-03
+4.1	Improve our “front of house”: API Documentation, Developer Portal, & Sandbox 	Support APIX Hackathon participants engage with RTP rails for G2P CDBC->DOMESTIC RTP use case in particular.	stretch: prepare to enable the same in Rwanda sandbox	Checklist document of work involved to migrate developer portal to Rwanda sandbox	10	2021-09-03
+4.2	Improve Hub Detailed Documentation for new adopters and contributors to hub software to get started more simply
+	hub documentation pi goal	hub documentation objective 1	hub documentation objective 1 - acceptance criteria / definition of done	10	2021-09-06
+4.4	Add more Training Program content	training program PI goal	training program objective	training program success	10	2021-09-06
+
+
