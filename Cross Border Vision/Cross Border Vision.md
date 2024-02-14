@@ -58,7 +58,7 @@ Multi-country IIPS arrangements generally fall into one of three
 conceptual models. Variations exist in design elements within each
 model:
 
-![Source: BMGF]("3models.png" "Three Conceptual Models")
+![Source: BMGF](3models.png "Three Conceptual Models")
 
 Any IIPS integration models can theoretically be inclusive. We
 anticipate that all models will coexist and interact. Similarly, we
