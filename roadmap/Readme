@@ -1,1 +1,5 @@
 Current version of the Mojaloop Product Roadmap. Previous versions are held in the "Archive" subfolder.
+
+The latest version (20th March 2024) includes:
+- clarification that inter-scheme connections are to be named proxies, not cross network providers, as CNP is a function take on by an FI; whereas a proxy is a technical interface.
+- Addition of a new workstream, "Planning for Multi-Scheme Deployments", which is in lace to facilitate discussions around this subject and to move from design to imoplementation.
