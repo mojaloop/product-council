@@ -1,37 +1,38 @@
 # Table of Contents
 
-Cross border challenges
+[Cross border challenges](#Cross-border-challenges)
 
-Cross border opportunities
+[Cross border opportunities](#Cross-border-opportunities)
 
-Cross-border IIPS arrangement types
+[Cross-border IIPS arrangement types](#Cross-border-IIPS-arrangement-types)
 
-Mojaloop vision and objectives
+[Mojaloop vision and objectives](#Mojaloop-vision-and-objectives)
 
-Use cases
+[Use cases](#Use-Cases)
 
-Unique cross-border requirements
+[Unique cross-border requirements](#Unique-cross-border-requirements)
 
-Mojaloop designs
+[Mojaloop designs](#Mojaloop-designs)
 
-Clearing
+[Clearing](#Clearing)
 
-Settlement
+[Settlement](#Settlement)
 
-Addressing and Directories
+[Addressing and Directories](#Addressing-and-Directories)
 
-Compliance Screening
+[Compliance Screening](#Compliance-Screening)
 
-Reporting and Information Queries
+[Reporting and Information Queries](#Reporting-and-Information-Queries)
 
-Currency Conversion
+[Currency Conversion](#Currency-Conversion)
 
-Fraud Management
+[Harmonization of Domestic IPS Differences](#Harmonization-of-Domestic-IPS-Differences)
 
-Harmonization of Domestic IPS Differences
+[Fraud Management](#Fraud-Management)
 
-Related regulatory and scheme considerations
+[Related regulatory and scheme considerations](#Related-regulatory-and-scheme-considerations)
 
+<a id="Cross-border-challenges"></a>
 # Cross border challenges
 
 Although most of the value exchanged cross-border is comprised of
@@ -41,6 +42,7 @@ meaningfully contribute to these high transaction volumes. However, to
 date, low-income end users have had to tolerate friction and frustration
 to send cross-border payments.
 
+<a id="Cross-border-opportunities"></a>
 # Cross border opportunities
 
 Longstanding cross-border methods (e.g., correspondent banking and money
@@ -52,6 +54,7 @@ connections through new multi-country inclusive instant payment systems
 (IIPS), which broadly fall into three arrangement types: centralized,
 partially centralized, and decentralized.
 
+<a id="Cross-border-IIPS-arrangement-types"></a>
 # Cross-border IIPS arrangement types
 
 Multi-country IIPS arrangements generally fall into one of three
@@ -72,6 +75,7 @@ to unique arrangement requirements when they exist. For example, a
 decentralized model uniquely requires cross scheme considerations and
 domestic IPS readiness.
 
+<a id="Mojaloop-vision-and-objectives"></a>
 # Mojaloop cross-border vision and objectives
 
 This document, and the Mojaloop cross-border effort, establishes the
@@ -82,24 +86,24 @@ invariants and the Level One Project (i.e., immediate funds transfer,
 irrevocable push payments only, non-bank participation, etc.). Our
 objectives include:
 
-1)  Maintain an end user focused- design, that meets the needs of
+1.  Maintain an end user focused- design, that meets the needs of
     low-income and women end user requirements;
 
-2)  Allow for all use cases but prioritize use cases most critical to
+2.  Allow for all use cases but prioritize use cases most critical to
     low-income and women end users – specifically P2P cross-border
     remittances and P2M cross-border Micro, Small, and Medium Enterprise
     (MSME) payments;
 
-3)  Design a flexible, inclusive architecture that can be used for any
+3.  Design a flexible, inclusive architecture that can be used for any
     cross-border arrangement type and can connect one arrangement to
     another;
 
-4)  Solve for unique cross-border IIPS requirements
+4.  Solve for unique cross-border IIPS requirements
 
-We assume the vision will be actualized by individual Mojaloop workstreams, who are responsible for OSS development.
+We assume the vision will be actualized by individual Mojaloop workstreams, which are responsible for OSS development.
 
+<a id="Use-Cases"></a>
 # Use Cases
-
 As stated above, we aim to allow for all use cases but prioritize use
 cases most critical to low-income and women end users – specifically P2P
 cross-border remittances and P2M cross-border Micro, Small, and Medium
@@ -126,41 +130,44 @@ Use cases that are outside of scope are consistent with those outside of
 scope for Mojaloop in a single country context, for example, voucher
 payments.
 
+<a id="Unique-cross-border-requirements"></a>
 # Unique cross-border IIPS requirements 
 
 To achieve the Mojaloop goals and meet the use case requirements, a
 cross-border IIPS **must** design for
 
-Cross border clearing,
+- Cross border clearing,
 
-Cross border settlement,
+- Cross border settlement,
 
-Cross border addressing or addressing resolution,
+- Cross border addressing or addressing resolution,
 
-Cross border compliance screening,
+- Cross border compliance screening,
 
-Cross-border reporting and information queries.
+- Cross-border reporting and information queries.
 
 A cross-border IIPS **may or may not** design for
 
-Currency conversion from one jurisdictional currency to another, and
+- Currency conversion from one jurisdictional currency to another, and
 entity(ies) type(s) that can support currency conversion (i.e., ‘Foreign
 Exchange Provider’),
 
-Harmonization or management of domestic IIPS differences (in a
+- Harmonization or management of domestic IIPS differences (in a
 decentralized arrangement).
 
-A cross-border IIPS **supports the** implementation of
+A cross-border IIPS **supports** the implementation of
 
-Cross border fraud management.
+- Cross border fraud management.
 
+<a id="Mojaloop-designs"></a>
 # Mojaloop Design
 
 The remaining sections share Mojaloop cross-border design requirements
-to drive inclusivity. For additional detail (e.g., relevant API specs),
+to drive inclusivity. For additional detail (such as the relevant API specs),
 please visit the Mojaloop repo on GitHub or reach out to a Mojaloop team
 member.
 
+<a id="Clearing"></a>
 # Mojaloop design: cross-border clearing
 
 1.  The architecture applies Mojaloop clearing design choices to a
@@ -175,7 +182,7 @@ member.
     2.  Decentralized arrangements whereby participants connect to a
         jurisdictional IPS which connect to one another.
 
-3.  To support 1a., the overall architecture allows for, but does not
+3.  To support 2.1, the overall architecture allows for, but does not
     require, a centralized platform. The regional platform can perform
     the following functions:
 
@@ -213,6 +220,7 @@ member.
 
 11. The design can process on-us transactions.
 
+<a id="Settlement"></a>
 # Mojaloop design: cross-border settlement
 
 1.  The architecture prioritizes local currency settlement but supports
@@ -241,6 +249,7 @@ member.
 
 6.  The design ensures that integrity of the liquidity cover process.
 
+<a id="Addressing-and-Directories"></a>
 # Mojaloop design: cross-border addressing and directories
 
 1.  The design supports the use of aliases, whereby the sender does not
@@ -270,6 +279,7 @@ member.
 7.  The design accommodates a referential (zero knowledge proof) or a
     ‘message rich’ approach.
 
+<a id="Compliance-Screening"></a>
 # Mojaloop design: cross-border compliance screening 
 
 1.  The design supports the performance of all required compliance
@@ -308,6 +318,7 @@ member.
     relevant transaction details in a traceable manner in the timeline
     as required by the regulator.
 
+<a id="Reporting-and-Information-Queries"></a>
 # Mojaloop design: cross-border reporting and information queries
 
 1.  The design supports traceable money transfers.
@@ -339,6 +350,7 @@ member.
 10. Data for reporting can be sorted and categorized for forensic
     purposes as it relates to transfers within the Scheme.
 
+<a id="Currency-Conversion"></a>
 # Mojaloop design: cross-border currency conversion
 
 1.  The design supports the ability to conduct a transfer where the
@@ -366,6 +378,7 @@ member.
     request with competing quotes. The design allows for an alternative
     approach to currency conversion quoting and servicing.
 
+<a id="Harmonization-of-Domestic-IPS-Differences"></a>
 # Mojaloop design: Harmonization of domestic IIPS differences
 
 - The design ensures the ability to accommodate Mojaloop and
@@ -378,6 +391,7 @@ member.
 - The design acknowledges harmonization of other aspects may be required
   to facilitate cross-border transfers (e.g. messaging protocols).
 
+<a id="Fraud-Management"></a>
 # Mojaloop design: fraud management
 
 1.  The design assumes compliance for fraud management still lies with
@@ -406,7 +420,8 @@ member.
 8.  The design promotes safe payment-addressing, clear account naming
     conventions, and confirmation of payee as anti-fraud mechanisms.
 
-# Related scheme and regulatory considerations 
+<a id="Related-regulatory-and-scheme-considerations"></a>
+# Related regulatory and scheme considerations 
 
 The Mojaloop Foundation is designing technology to support inclusive
 instant cross-border transfers. How that design comes to life can be
