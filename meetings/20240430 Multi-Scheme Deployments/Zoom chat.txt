@@ -1,0 +1,62 @@
+12:08:10	 From Paul Makin  To  Ei Nghon Phoo - ThitsaWorks(privately) : Thanks for joining! I was starting to worry….
+12:17:25	 From Paul Makin  To  Karim Jindani - Paysys Labs(privately) : Hi Karim, Good to see you, glad you could join.
+12:17:39	 From Karim Jindani - Paysys Labs  To  Paul Makin(privately) : Reacted to "Hi Karim, Good to se..." with 👍🏼
+12:19:52	 From Karim Jindani - Paysys Labs : Question:  (can be responded later after presentation) - 1. What is Proxy?  Does it represent a legal entity OR it represents obligations of Scheme 2 towards Scheme 1 and vice versa. 2. In a case where Multiple National Payment schemes, are interoperating, then the "Proxy" will represent The regional payment system inside "National Payment scheme Payment System" and "National payment system" inside the "Regional Payment system"
+12:24:22	 From Nyi Nyein Aye - ThitsaWorks  To  Paul Makin(privately) : Ei Nghon is in the call now, Paul. Just FYI.
+12:24:48	 From Paul Makin  To  Nyi Nyein Aye - ThitsaWorks(privately) : Replying to "Ei Nghon is in the c..."
+
+Yes, thanks Nyi. I messaged her directly.
+12:24:59	 From Nyi Nyein Aye - ThitsaWorks  To  Paul Makin(privately) : Replying to "Ei Nghon is in the c..."
+
+Got it. Thanks.
+12:25:16	 From Karim Jindani - Paysys Labs : In terms of handling of the time out situation1. In case multiple National Payment system switches are connecting to a Regional Payment system, then Regional Payment system should hold the single source of truth because the Regional Payment system will be the one doing the "Settlement of Funds".   Does the given proposal also suggest this or something else?2.  In a situation where 2 schemes are connecting via a Proxy, the scheme which is receiving "incoming clearing request" will hold the posting of Payment in its central ledger, till it gets a confirmation from the "Sender scheme's Payment switch"?
+12:28:25	 From MadeOfGOD  To  Paul Makin(privately) : Hi Paul,My apologies, but I need to leave the call in about 10 minutes as I have a monthly reporting meeting with our Minister of ICT scheduled at the same time. I'm currently in her office.
+12:28:51	 From Karim Jindani - Paysys Labs : For Discovery.=========1. The suggested business process of taking a decision after Oracle returns a result means making changes in the ALS - Alternatively, we can let the Oracle code this business Logic. That will keep ALS as-is - The oracle can keep the list of Proxies (just like it holds the List of Payee DFSPs against known Aliases)
+12:30:49	 From Paul Makin  To  MadeOfGOD(privately) : Replying to "Hi Paul,
+My apologie..."
+
+OK thank you for attending. Might I ask your name, please?
+12:31:50	 From MadeOfGOD  To  Paul Makin(privately) : Replying to "Hi Paul,My apologie..."
+
+Innocent Kawooya
+12:32:05	 From Paul Makin  To  MadeOfGOD(privately) : Replying to "Hi Paul,
+My apologie..."
+
+Innocent! We need you here!
+12:33:10	 From James Bush : Replying to "For Discovery.
+=====..."
+
+worth discussing the separation of responsibilities between ALS and oracles.
+12:43:21	 From Alain Kajangwe (WiredIn) : Regarding which side that initiates the timeout, putting this on the Creditor DFSP could lead to some missed timeout cases, in the event where the creditor has responded however the response never reaches the switch, in this case we might have some missed timeouts, furthermore some DFSPs might not be able to issue/generate the timeouts. Putting this responsibility on the Switch would be better in my opinion. In this configuration the switch could send a CANCEL response to the Sender DFSP and a REVERSAL message to the Creditor/Receiver, in order to balance the 2 ends.
+12:43:55	 From Karim Jindani - Paysys Labs : Replying to "In terms of handling..."
+
+1. For Hub and Spoke - Hub is the one who will perform settlements so they need to be the one deciding "Finality of payments" between 2 national payment schemes. The National schemes (through proxy) are participants in the Regional payment system.2. For a bi-lateral model, we need to consider which of the schemes (Sender or Receiver scheme decides the finality of payments)- It should not be hardcoded in our design that "Receiver" is the one who decides finality.
+12:44:10	 From Karim Jindani - Paysys Labs : Reacted to "Regarding which side..." with 👍🏼
+12:47:05	 From Karim Jindani - Paysys Labs : Can we draw the scenarios of Time Out for time-outs in all cases before concluding "whether Creditor DFSP" should do this or "Sender Payment scheme" should decide.
+12:47:19	 From Min THA GYAW : Reacted to "Can we draw the scen..." with 👍
+12:47:22	 From Paul Makin : Reacted to "Can we draw the scen..." with 👍
+12:47:43	 From Michael Richards : Replying to "Can we draw the scen..."
+
+I'll take that as an action, Karim
+12:48:20	 From Julie Guetta : Reacted to "I'll take that as an…" with 👌
+12:49:43	 From Karim Jindani - Paysys Labs : If Creditor Switch decides to post the transaction in its Central ledger, it means the Creditor switch is saying - I will pay you. - If the response from Creditor Switch does not reach the Sender Switch then Sender switch will release the funds it has held. then how will creditor switch pay to "Creditor DFSP"
+12:51:03	 From Karim Jindani - Paysys Labs : Instead if we say that "Sender Switch" is the one who decides on final posting on Central Ledger and only when it confirms the "Receiving Switch" will post the payment in its Central Ledger, that ensures we won't have any liquidity risk.
+12:51:35	 From Karim Jindani - Paysys Labs : The final notification by Sending switch after posting a transaction can be sent as a "Store and Forward" advise
+12:53:37	 From Michael Richards : Replying to "The final notificati..."
+
+Actually, it means that the switch is saying "I will ensure that the proxy pays you"
+12:54:46	 From Warren Carew : This is why there is two stage commit
+12:56:25	 From Aung Thaw Aye - ThitsaWorks : Reacted to "This is why there is..." with 👍
+12:56:47	 From Julie Guetta : To be fair, most of the instant payments scheme are pre funded!
+12:57:32	 From Sam Kummary : Reacted to "This is why there is..." with 👍
+12:57:54	 From Sam Kummary : Reacted to "To be fair, most of ..." with 👍
+12:58:23	 From Michael Richards : Replying to "In terms of handling..."
+
+On 2, Karim: at present it is definitely a core part of our model that the receiver decides the finality of payment.
+12:58:58	 From Karim Jindani - Paysys Labs : Replying to "To be fair, most of ..."
+
+yes they are. Its not a question of pre-funding. The point is whether the receiving switch or sending switch will take the decision to post the transaction.
+12:59:40	 From Michael Richards : Replying to "To be fair, most of ..."
+
+And our model definitely says: the receiving one
+12:59:49	 From Nyi Nyein Aye - ThitsaWorks : Thank you.
