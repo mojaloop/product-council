@@ -1,0 +1,116 @@
+11:34:18	 From James Bush : read stop
+11:34:29	 From James Bush : opt out
+11:39:51	 From Paysys Labs : The adoption of Mojaloop in cross border payments will involve it to interact with Non Mojaloop scheme. So in terms of Product design the solution should consider this on priority.
+11:40:37	 From Aung Thaw Aye - ThitsaWorks : Reacted to "The adoption of Moja..." with 👍
+11:42:53	 From Michael Richards : Replying to "The adoption of Moja..."
+
+Mojaloop can do this, but there may be serious impacts on cost. All of these proposals are designed towork whether the schemes are all Mojaloop or include non-Mojaloop schemes. If you see anywhere where you think that's not true, let me know.
+11:50:11	 From Paysys Labs : Replying to "The adoption of Moja..." 
+
+ For starters, no pay...
+11:52:22	 From Michael Richards : Replying to "The adoption of Moja..."
+
+It is for those payment schemes to decide how to make that mapping. We cannot design for them; but they will have to do that, or something like it, to be able to participate in a network with any other (not just a Mojaloop) scheme)
+11:57:44	 From Paysys Labs : Question:
+
+ It is not clear what is this design  trying to achieve.?
+11:59:38	 From James Bush : Replying to "Question:
+
+ It is no..."
+
+do you mean the identifier resolution by the oracle?
+12:00:37	 From Paul Makin : Everyone, I’d like to emphasise as Product Director that this implementation does not pretend to be an end point. It should instead be seen as a first solution, and that we of course envisage it evolving in the future to meet other requirements.
+12:00:46	 From Michael Richards : Replying to "Question:
+
+ It is no..."
+
+It's designed to respond to criticisms of the original design made by, er, you
+12:00:52	 From Paysys Labs : Replying to "Question:
+
+ It is no..." 
+
+ In previous slides w...
+12:05:44	 From Paysys Labs : If scheme 3 gets a response to transfer from Payee DFSP and scheme 3 fails to reply to Proxy, what will happen?
+12:06:03	 From Aung Thaw Aye - ThitsaWorks : Reacted to "If scheme 3 gets a r..." with 👍
+12:06:17	 From Michael Richards : Replying to "If scheme 3 gets a r..."
+
+It retries until it can
+12:07:26	 From Paysys Labs : Replying to "If scheme 3 gets a r..." 
+
+ So money has been cr...
+12:08:03	 From Warren Carew : Forwarded until finalised state
+12:09:06	 From Michael Richards : Replying to "If scheme 3 gets a r..."
+
+Until the message gets through, yes
+12:09:32	 From Paysys Labs : Replying to "If scheme 3 gets a r..." 
+
+ All standard ISO2002...
+12:10:19	 From Michael Richards : Replying to "If scheme 3 gets a r..."
+
+Looks better, but is topology-dependent, which we don't want
+12:11:15	 From Paysys Labs : Replying to "If scheme 3 gets a r..." 
+
+ This can work in Bil...
+12:11:34	 From Paysys Labs : Replying to "If scheme 3 gets a r..." 
+
+ If only 2 schemes ar...
+12:11:45	 From Warren Carew : Replying to "If scheme 3 gets a r..." 
+
+ That is why the inte...
+12:12:04	 From Paysys Labs : In this design Proxy 2 will give cancellation to Scheme 2
+12:12:12	 From Paysys Labs : While Txn is posted in Scheme 3
+12:12:28	 From Michael Richards : Replying to "If scheme 3 gets a r..."
+
+No good. The creditor DFSP is the arbiter of whether the transfer is finalised, in our model
+12:12:41	 From Paysys Labs : Replying to "If scheme 3 gets a r..." 
+
+ We don't design flow...
+12:15:15	 From Michael Richards : Replying to "If scheme 3 gets a r..."
+
+"This can work in Bilateral topology also" This requires every switch to know what kind of network topology it's participating in.
+12:16:00	 From Paysys Labs : Replying to "If scheme 3 gets a r..." 
+
+ Of course it will kn...
+12:16:56	 From Michael Richards : Replying to "If scheme 3 gets a r..."
+
+How?
+12:19:21	 From Paysys Labs : Replying to "If scheme 3 gets a r..." 
+
+ If a Payment switch ...
+12:22:44	 From Michael Richards : Replying to "If scheme 3 gets a r..."
+
+All the switch will see is a proxy?
+12:23:09	 From Michael Richards : Replying to "If scheme 3 gets a r..."
+
+If a scheme joins somewhere else on the chain, how will it know that?
+12:23:28	 From Julie Guetta : Replying to "The adoption of Moja..."
+
+We have a specific workstream for this
+12:23:58	 From Paysys Labs : Replying to "The adoption of Moja..." 
+
+ Which one?
+12:25:52	 From Steve Haley : Recent discussions with BIS and SWIFT make me more confident that there will be adequate demand for multi-scheme that meets these higher assumptions.
+12:27:00	 From Paysys Labs : I am not aware of this discussions. If you can share the details
+12:30:39	 From Steve Haley : Sorry - my recent discussions - informal chats that the changes to ISO and the two phases will be required by them in the future - so it is worthwhile to focus on the ideal and let adopters design the compromise (as James just said)
+12:37:09	 From Julie Guetta : Perhaps we can look at the flow in details for TCIB and PAPSS so that Karim's concerns are addressed? Surely we can take it as a priority action for this workstream
+12:37:51	 From Paysys Labs : Reacted to Perhaps we can look ... with "👍"
+12:37:58	 From Paysys Labs : Replying to "Perhaps we can look ..." 
+
+ Thanks. Pls
+12:38:29	 From Paul Makin : Replying to "Perhaps we can look ..."
+
+Julie, you’re co-lead on both work streams, so you are in the prime position to coordinate that.
+12:39:16	 From Paul Makin : Replying to "Perhaps we can look ..."
+
+There have always been strong synergies between the work streams, and I’d be happy to support you in this.
+12:40:28	 From Julie Guetta : Replying to "Perhaps we can look ..."
+
+Perfect. I think we have a workable approach
+12:40:53	 From Julie Guetta : Replying to "Perhaps we can look ..."
+
+@Luis Roy Zulu | PBS, any news on the clearing specifications? I need this to crack on I am afraid
+12:41:30	 From Paysys Labs : Yes ok
+12:41:59	 From Paysys Labs : Sorry need to drop off. Thanks.
+12:51:08	 From Paul Makin : #ws-interscheme
+12:51:57	 From Julie Guetta : if you want an outlook invit so that the workstream meeting is booked in your calendar, please share your email address
+12:52:16	 From Steve Haley : Amazing session!
