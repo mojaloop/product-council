@@ -1,0 +1,9 @@
+This Product Council was an open discussion, to consider the idea of adopting/proposing an “Open Banking” style SDK for fintech connection to Mojaloop - essentially support PISP and AISP-style services.
+ 
+This was motivated by a discussion a few weeks ago in the ISO 20022 workstream, during which it was highlighted that ISO 20022 does not address PISP/AISP, and that therefore the idea of migrating Mojaloop’s PISP services to ISO 20022 is meaningless. Instead, that space is occupied by open banking APIs, of which there are multiple flavours. Some have tried to move to standardisation, such as https://www.openbanking.org.uk/
+ 
+Why would we bother? After all, fintechs can connect directly using PISP 2.0. Well the reasoning I want to test is that although PISP 2.0 is a great, flexible API, it’s not the easiest to use, so the suggestion is to offer an SDK, as we do for FSPIOP, that offers a “fintech connector” (an open banking API) to make using PISP 2.0 easier, and which would also handle issues of security and certificate management.
+ 
+Would such an approach have value? If so, what should the “fintech connector” SDK look like?
+
+The diagram presented is in this folder, and the recording of the session is at https://youtu.be/POj5X8lA5Ag

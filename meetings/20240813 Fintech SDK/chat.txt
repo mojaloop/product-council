@@ -1,0 +1,14 @@
+12:26:10	 From Sam Kummary : https://github.com/mojaloop/thirdparty-sdk
+12:26:27	 From Sam Kummary : Similar to the sdk-scheme-adapter or what we call in friendly terms ml-connector
+12:26:49	 From Alain Kajangwe (WiredIn) : Reacted to "Similar to the sdk-s..." with 👍🏿
+12:28:39	 From James Bush : ISO20022 currently has no way of representing the auth/associations, hence the split in Pauls diagram between "admin" and "ISO20022"
+12:28:45	 From Sam Kummary : Btw, nice representation, Paul.
+12:28:53	 From Sam Kummary : Reacted to "ISO20022 currently h…" with 👍
+12:29:22	 From Paul Baker : Reacted to "Btw, nice representa..." with 👍
+12:34:28	 From Sam Kummary : Let me check Alain, it’s public so cloning shouldn’t be an issue
+12:35:04	 From Mohamd Maalim : Reacted to "ISO20022 currently..." with 👍
+12:46:36	 From Julie Guetta : The definition of Open Banking is different from one jurisdiction to another
+12:46:50	 From Mohamd Maalim : Reacted to "The definition of ..." with 👍
+12:47:19	 From Julie Guetta : Agree Paul!
+12:57:10	 From James Bush : https://mojaloop.slack.com/archives/C0710N0S9AM
+12:57:46	 From Innocent Ephraim : Thanks
