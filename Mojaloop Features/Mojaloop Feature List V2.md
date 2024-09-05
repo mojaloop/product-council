@@ -23,16 +23,16 @@ This feature list covers the following aspects of Mojaloop:
   
 &nbsp;
 # Scope
-This feature list is subject to amendment as the Mojaloop ecosystem continues to develop. This version applies to Mojaloop Zambezi, V16.1
+This feature list is subject to amendment as the Mojaloop ecosystem continues to develop. 
 # Transactions
 ## Use Cases
 A Mojaloop Hub supports a range of different transaction types.  
-DFSP-initiated:
+**DFSP-initiated**
 - Account to account, or person to person (P2P)
 - Merchant Request to Pay
 - Bulk payments lists.  
 
-PISP-initiated:
+**PISP-initiated**
 - Account association/continuing authorisation
 - Request to Pay
 
