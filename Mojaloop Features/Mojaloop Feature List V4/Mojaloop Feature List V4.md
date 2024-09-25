@@ -2,7 +2,7 @@
 
 **DRAFT VERSION - SUBJECT TO REVIEW**
 
-**9th September 2024**  
+**25th September 2024**  
 Authors: Paul Makin, James Bush  
 Version: Draft 0.3  
 # About Mojaloop
@@ -22,7 +22,7 @@ This document catalogues the features of Mojaloop, independent of implementation
 The Mojaloop Foundation (MLF) defines an implementation as being an official instance of Mojaloop if it implements all of the features of Mojaloop, without exception, and they pass the standard set of Mojaloop tests.   
 
 This feature list covers the following aspects of Mojaloop:
-- [**Transactions**](./transactions.md), describing the use cases supported, the APIs, how a Mojaloop transaction proceeds, and the aspects of a Mojaloop transaction that make it uniquely suited to the implementation of an inclusive instant payments service.
+- [**Transactions**](./transactions.md#L14), describing the use cases supported, the APIs, how a Mojaloop transaction proceeds, and the aspects of a Mojaloop transaction that make it uniquely suited to the implementation of an inclusive instant payments service.
 - [**Risk Management**](./risk.md), setting out the measures taken to ensure that no DFSP participating in a Mojaloop scheme is exposed to any counterparty risk, and that the integrity of the scheme as a whole is protected.
 * [**Product and Operational Features**](./product.md), such as portals for user and service management, and the configuration and operation of a Mojaloop Hub.     
 * [**Engineering Principles**](./engineering.md), such as algorithmic adherence to the Mojaloop specification, code quality, security practices, scalability and performance patterns (amongst others).  
