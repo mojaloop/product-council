@@ -13,7 +13,7 @@ The core functions that Mojaloop provides to connected financial institutions ar
 2. **Clearing** of payments end to end, with robust measures that remove any element of doubt about the success of a transaction;
 3. **Settlement** of cleared transactions between financial institutions using a model agreed between those institutions, and according to a predefined schedule.   
 
-These core functions are supported by [unique transaction characteristics](./transactions.md#Unique Transaction Characteristics), which together allow low cost. 
+These core functions are supported by [unique transaction characteristics](./transactions.md#Unique-Transaction-Characteristics), which together allow low cost. 
 
 
 **Note** In Mojaloop terms, a DFSP - or Digital Financial Service Provider - is a generic term for any financial institution, of any size or status, that is able to transact digitally. It applies equally to the largest international bank and the smallest Microfinance Institution or mobile wallet operator. "DFSP" is used throughout this document.   
