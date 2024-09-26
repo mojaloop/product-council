@@ -1,3 +1,14 @@
+<style>
+table th:first-of-type {
+    width: 33%;
+}
+table th:nth-of-type(2) {
+    width: 33%;
+}
+table th:nth-of-type(3) {
+    width: 34%;
+}
+</style>
 # Mojaloop Feature List
 
 **DRAFT VERSION - SUBJECT TO REVIEW**
@@ -8,11 +19,7 @@ Version: Draft 0.4
 # About Mojaloop
 Mojaloop is open source instant payments software that interconnects disparate financial institutions in a manner that promotes financial inclusion and provides robust risk management. It is available for use by any body that wishes to use it to implement and operate a payments scheme.
 
-The core functions that Mojaloop provides to connected financial institutions are:   
-1. Payee address or **alias resolution**, ensuring that the correct payee account is reliably identified;
-2. **Clearing** of payments end to end, with robust measures that remove any element of doubt about the success of a transaction;
-3. **Settlement** of cleared transactions between financial institutions using a model agreed between those institutions, and according to a predefined schedule.   
-
+These are the core functions that Mojaloop provides to connected financial institutions:   
 
 ||||
 |----|--------------|----------|
