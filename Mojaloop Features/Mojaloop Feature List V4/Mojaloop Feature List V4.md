@@ -15,6 +15,14 @@ The core functions that Mojaloop provides to connected financial institutions ar
 
 These core functions are supported by some [unique characteristics](./transactions.md#Unique-Transaction-Characteristics), which together make Mojaloop a low cost, inclusive instant payments system:  
 
+||||
+|----|--------------|----------|
+|![alias](./alias.png)|![clearing](./clearing.png)|![settlement](./settlement.png)|
+| Payee address or **alias resolution**, ensuring that the correct payee account is reliably identified |**Clearing** of payments end to end, with robust measures that remove any element of doubt about the success of a transaction|**Settlement** of cleared transactions between financial institutions using a model agreed between those institutions, and according to a predefined schedule.
+
+
+
+
 1. **The Agreement of Terms, or Quotation,** phase of a transaction, which allows two DFSPs to agree that a transaction *can* take place *before* it is committed.
 2. **End to End Non-Repudiation** guarantees that a transaction will only be committed if *both* the Payer and the Payee DFSPs accept that it is, so neither party can repudiate the transaction. 
 3. **The PISP API is made available through the Mojaloop Hub,** not by individual DFSPs. Consequently a fintech can integrate with the Hub and immediately be connected to **all** connected DFSPs.
@@ -31,8 +39,8 @@ The Mojaloop Foundation (MLF) defines an implementation as being an official ins
 This feature list covers the following aspects of Mojaloop:
 - [**Transactions**](./transactions.md), describing the use cases supported, the APIs, how a Mojaloop transaction proceeds, and the aspects of a Mojaloop transaction that make it uniquely suited to the implementation of an inclusive instant payments service.
 - [**Risk Management**](./risk.md), setting out the measures taken to ensure that no DFSP participating in a Mojaloop scheme is exposed to any counterparty risk, and that the integrity of the scheme as a whole is protected.
-* [**Product and Operational Features**](./product.md), such as portals for user and service management, and the configuration and operation of a Mojaloop Hub.     
-* [**Engineering Principles**](./engineering.md), such as algorithmic adherence to the Mojaloop specification, code quality, security practices, scalability and performance patterns (amongst others).  
+- [**Product and Operational Features**](./product.md), such as portals for user and service management, and the configuration and operation of a Mojaloop Hub.     
+- [**Engineering Principles**](./engineering.md), such as algorithmic adherence to the Mojaloop specification, code quality, security practices, scalability and performance patterns (amongst others).  
 - [**Invariants**](./invariants.md), setting out the development and operational principles to which any Mojaloop implementation must adhere.   
 
 &nbsp;
