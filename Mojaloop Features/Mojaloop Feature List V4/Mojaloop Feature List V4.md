@@ -12,7 +12,7 @@ These are the core functions that Mojaloop provides to connected financial insti
 
 ||||
 |--------------|--------------|--------------|
-|<img align="centre" width="300" src="./alias.png">|!<img align="centre" width="300" src="./clearing.png">|!<img align="centre" width="300" src="./settlement.png">|
+|<img align="centre" width="300" src="./alias.png"> &nbsp; &nbsp; |<img align="centre" width="300" src="./clearing.png">|<img align="centre" width="300" src="./settlement.png">|
 | Payee address or **alias resolution**, ensuring that the correct payee account is reliably identified |**Clearing** of payments end to end, with robust measures that remove any element of doubt about the success of a transaction|**Settlement** of cleared transactions between financial institutions using a model agreed between those institutions, and according to a predefined schedule.|
 
 &nbsp;
