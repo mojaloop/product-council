@@ -1,14 +1,3 @@
-<style>
-table th:first-of-type {
-    width: 33%;
-}
-table th:nth-of-type(2) {
-    width: 33%;
-}
-table th:nth-of-type(3) {
-    width: 34%;
-}
-</style>
 # Mojaloop Feature List
 
 **DRAFT VERSION - SUBJECT TO REVIEW**
@@ -22,7 +11,7 @@ Mojaloop is open source instant payments software that interconnects disparate f
 These are the core functions that Mojaloop provides to connected financial institutions:   
 
 ||||
-|----|--------------|----------|
+|--------------|--------------|--------------|
 |<img align="centre" width="300" src="./alias.png">|!<img align="centre" width="300" src="./clearing.png">|!<img align="centre" width="300" src="./settlement.png">|
 | Payee address or **alias resolution**, ensuring that the correct payee account is reliably identified |**Clearing** of payments end to end, with robust measures that remove any element of doubt about the success of a transaction|**Settlement** of cleared transactions between financial institutions using a model agreed between those institutions, and according to a predefined schedule.|
 
