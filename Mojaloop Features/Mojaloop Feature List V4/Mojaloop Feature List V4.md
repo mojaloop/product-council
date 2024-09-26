@@ -13,9 +13,9 @@ The core functions that Mojaloop provides to connected financial institutions ar
 2. **Clearing** of payments end to end, with robust measures that remove any element of doubt about the success of a transaction;
 3. **Settlement** of cleared transactions between financial institutions using a model agreed between those institutions, and according to a predefined schedule.   
 
-These core functions are supported by [unique transaction characteristics](./transactions.md#Unique-Transaction-Characteristics), which together make Mojaloop a low cost, inclusive instant payments system:  
+These core functions are supported by some [unique characteristics](./transactions.md#Unique-Transaction-Characteristics), which together make Mojaloop a low cost, inclusive instant payments system:  
 
-1. **The Agreement of Terms, or Quotation,** phase of a transaction, which allows two DFSPs to **agree that a transaction *can* take place *before* it is committed**.
+1. **The Agreement of Terms, or Quotation,** phase of a transaction, which allows two DFSPs to agree that a transaction *can* take place *before* it is committed.
 2. **End to End Non-Repudiation** guarantees that a transaction will only be committed if *both* the Payer and the Payee DFSPs accept that it is, so neither party can repudiate the transaction. 
 3. **The PISP API is made available through the Mojaloop Hub,** not by individual DFSPs. Consequently a fintech can integrate with the Hub and immediately be connected to **all** connected DFSPs.
 
