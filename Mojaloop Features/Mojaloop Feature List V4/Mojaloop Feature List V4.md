@@ -17,6 +17,12 @@ These are the core functions that Mojaloop provides to connected financial insti
 
 &nbsp;
 
+|Alias Resolution|Clearing|Settlement|
+|:--------------:|:--------------:|:--------------:|
+| Payee address or **alias resolution**, ensuring that the correct payee account is reliably identified |**Clearing** of payments end to end, with robust measures that remove any element of doubt about the success of a transaction|**Settlement** of cleared transactions between financial institutions using a model agreed between those institutions, and according to a predefined schedule.|
+
+&nbsp;
+
 These core functions are supported by some [unique characteristics](./transactions.md#Unique-Transaction-Characteristics), which together make Mojaloop a low cost, inclusive instant payments system:  
 
 
