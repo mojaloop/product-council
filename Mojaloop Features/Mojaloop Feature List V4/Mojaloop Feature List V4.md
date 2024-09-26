@@ -27,10 +27,6 @@ These core functions are supported by some [unique characteristics](./transactio
 **Note** In Mojaloop terms, a DFSP - or Digital Financial Service Provider - is a generic term for any financial institution, of any size or status, that is able to transact digitally. It applies equally to the largest international bank and the smallest Microfinance Institution or mobile wallet operator. "DFSP" is used throughout this document.   
 
 &nbsp;
-# Purpose of This Document  
-This document catalogues the features of Mojaloop, independent of implementation.  It is intended to both inform potential adopters of the features they can expect and (where appropriate) how those features can be expected to function, and to inform developers of the features they must implement in order for their efforts to be accepted as an official instance of Mojaloop.  
- 
-The Mojaloop Foundation (MLF) defines an implementation as being an official instance of Mojaloop if it implements all of the features of Mojaloop, without exception, and they pass the standard set of Mojaloop tests.   
 
 # Feature List
 This feature list covers the following aspects of Mojaloop:
@@ -44,6 +40,11 @@ This feature list covers the following aspects of Mojaloop:
 # Scope
 This feature list is subject to amendment as the Mojaloop ecosystem continues to develop.   
 
+&nbsp;
+# Purpose of This Document  
+This document catalogues the features of Mojaloop, independent of implementation.  It is intended to both inform potential adopters of the features they can expect and (where appropriate) how those features can be expected to function, and to inform developers of the features they must implement in order for their efforts to be accepted as an official instance of Mojaloop.  
+ 
+The Mojaloop Foundation (MLF) defines an implementation as being an official instance of Mojaloop if it implements all of the features of Mojaloop, without exception, and they pass the standard set of Mojaloop tests.   
 
 
 
