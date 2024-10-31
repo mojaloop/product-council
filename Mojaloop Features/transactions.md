@@ -33,38 +33,37 @@ operators.
 
 The Mojaloop Hub supports four core APIs:
 
-1 FSP Interoperability (FSPIOP) API
+1. FSP Interoperability (FSPIOP) API
 
-This API is the principal transactional API, supporting direct connections with Participants.It supports the P2P, Request To Pay (RTP), Bulk Payments and the DFSP-side of PISP transactions.
+	This API is the principal transactional API, supporting direct connections with Participants.It supports the P2P, Request To Pay (RTP), Bulk Payments and the DFSP-side of PISP transactions.
 
-Note that the Mojaloop Community is at an advanced stage of moving to ISO 20022 compliance, using an ISO 20022 message set provisionally agreed with the ISO 20022 Registration Management Group (RMG),and tailored to the needs of an Inclusive Instant Payments System (IIPS)such as Mojaloop. This will be offered to adopters as an alternative to FSPIOP.
+	Note that the Mojaloop Community is at an advanced stage of moving to ISO 20022 compliance, using an ISO 20022 message set provisionally agreed with the ISO 20022 Registration Management Group (RMG),and tailored to the needs of an Inclusive Instant Payments System (IIPS)such as Mojaloop. This will be offered to adopters as an alternative to FSPIOP.
 
-2  Administration API
+2.  Administration API
 
-The purpose of the Administration API is to enable Hub Operators to manage admin processes around:
+	The purpose of the Administration API is to enable Hub Operators to manage admin processes around:
 
--   creating/activating/deactivating participants in the Hub
+	-   creating/activating/deactivating participants in the Hub
 
--   adding and updating participant endpoint information
+	-   adding and updating participant endpoint information
 
--   managing participant accounts, limits, and positions
+	-   managing participant accounts, limits, and positions
 
--   creating Hub accounts
+	-   creating Hub accounts
 
--   performing Funds In and Funds Out operations
+	-   performing Funds In and Funds Out operations
 
--   creating/updating/viewing settlement models, for subsequent
-    management using the Settlement API
+	-   creating/updating/viewing settlement models, for subsequent management using the Settlement API
 
--   retrieving transfer details
+	-   retrieving transfer details
 
-3  Settlement API
+3.  Settlement API
 
-The settlement API is used to manage the settlement process. It is not intended for the purpose of managing settlement models.
+	The settlement API is used to manage the settlement process. It is not intended for the purpose of managing settlement models.
 
-4  Third-party Payment Initiation (3PPI/PISP) API
+4.  Third-party Payment Initiation (3PPI/PISP) API
 
-This API is used to manage third party payment arrangements - payments initiated by fintechs on behalf of their customers from accounts held by those customers at DFSPs connected to the Mojaloop Hub. -- and to initiate those payments when authorized.
+	This API is used to manage third party payment arrangements - payments initiated by fintechs on behalf of their customers from accounts held by those customers at DFSPs connected to the Mojaloop Hub. -- and to initiate those payments when authorized.
 
 ## Phases 
 
@@ -78,27 +77,14 @@ schedule.
 All Mojaloop transactions are asynchronous (to ensure the most efficient
 use of resources), and proceed through three phases:
 
-1.  **Discovery,** when the Payer's DFSP works with the Mojaloop Hub to
-    determine where the payment should be sent. This phase resolves an
-    alias to a specific Payee DFSP and, in collaboration with that DFSP,
-    an individual account.
-&nbsp;
-2.  **Agreement of Terms, or Quotation,** when the two DFSP parties to
-    the transaction agree that the transaction can go ahead (supporting,
-    for example, restrictions relating to tiered KYC), and on what terms
-    (including fees).
-&nbsp;
-3.  **Transfer,** when the transaction between the two DFSPs (and by
-    proxy their customers' accounts) is cleared.
+1.  **Discovery,** when the Payer's DFSP works with the Mojaloop Hub to determine where the payment should be sent. This phase resolves an alias to a specific Payee DFSP and, in collaboration with that DFSP, an individual account.
+
+2.  **Agreement of Terms, or Quotation,** when the two DFSP parties to the transaction agree that the transaction can go ahead (supporting, for example, restrictions relating to tiered KYC), and on what terms (including fees).
+
+3.  **Transfer,** when the transaction between the two DFSPs (and by proxy their customers' accounts) is cleared.
 &nbsp;
 
-This three phase approach has been designed to minimise the risk of
-transactions failing, so that we remove the need for transaction
-reconciliation by DFSPs, eliminate most causes of disputes, and so
-minimise costs for all parties. This, together with the Mojaloop
-approach to Risk Management, ensures that even the smallest MFI and the
-biggest international bank can participate on equal terms, with neither
-imposing risk on the other (or indeed on the Hub itself).
+This three phase approach has been designed to minimise the risk of transactions failing, so that we remove the need for transaction reconciliation by DFSPs, eliminate most causes of disputes, and so minimise costs for all parties. This, together with the Mojaloop approach to Risk Management, ensures that even the smallest MFI and the biggest international bank can participate on equal terms, with neither imposing risk on the other (or indeed on the Hub itself).
 
 ## Unique Transaction Characteristics
 
