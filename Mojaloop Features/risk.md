@@ -10,7 +10,7 @@ applied are:
     only be withdrawn, in whole or in part, from the Scheme with the
     agreement of the Scheme Operator.
     &nbsp;
-2.  A transaction will only be cleared (during the Quotation phase) if
+2.  A transaction will only be cleared (during the Transfer phase) if
     there is sufficient liquidity available to cover it, as measured
     against the liquidity balance, the DFSP's current Position (the net
     total of previously-cleared transactions since the last settlement
