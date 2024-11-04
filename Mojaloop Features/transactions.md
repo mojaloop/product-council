@@ -10,7 +10,7 @@ by, for example, a fintech, using Mojaloop's PISP interface.
 
 |DFSP-initiated|PISP-initiated|
 |:--------------:|:--------------:|
-|Account to account: person to person (P2P) or business to business or government (B2B/B2G)<br><br>Merchant Request to Pay<br><br>Bulk payments lists of any size, from small/local to nation-scale, in support of social payments and salaries.|Account association/continuing authorization<br><br>Request to Pay|
+|Account to account: person to person (P2P) or business to business or government (B2B/B2G)<br><br>Merchant Request to Pay<br><br>Bulk payments lists of any size, from small/local to nation-scale, in support of G2P, social payments, pensions and salaries.|Account association/continuing authorization<br><br>Request to Pay|
 
 ## Value-Add Use Cases
 
