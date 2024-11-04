@@ -27,7 +27,7 @@ these portals, and create new ones, to meet their specific requirements.
 
 The BOF channels all activity through a single Identity and Access
 Management (IAM) framework, which incorporates Role Based Access
-Controls (RBACs) to allow a hub operator to manage an individual's
+Controls (RBACs), giving a hub operator granular control of an individual's
 access to the management capabilities of the Mojaloop Hub.
 
 Access to each of the above functions is implemented using the BOF, and

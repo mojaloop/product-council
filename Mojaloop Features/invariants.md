@@ -224,7 +224,7 @@ and API client.**
 3.  Secure Terms of Transfer: Interledger Protocol (ILP) between Payer
     and Payee participants.
     -   Protects the integrity of the payment condition and its
-        fulfillment.
+        fulfilment.
     -   Limits the time within which a transfer instruction is valid.
 
 ## Operational Characteristics
