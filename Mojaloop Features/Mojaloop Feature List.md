@@ -22,25 +22,16 @@ financial institutions:
 These core functions are supported by some [unique characteristics](./transactions.md#Unique-Transaction-Characteristics), which
 together make Mojaloop a low cost, inclusive instant payments system:
 
-1.  **A Three Phase Transaction Flow**, which together ensure that
-    transactions are not misdirected, that both source and destination
-    accounts are able to complete the transaction and at what cost, and
-    that both parties have the same, real-time view of the success or
-    failure of the transaction.
-2.  **The Agreement of Terms, or Quotation,** phase of a transaction,
-    which allows two DFSPs to agree that a transaction *can* take
-    place *before* either commit to it.
-3.  **End to End Non-Repudiation** guarantees that each party to a
-    message can be assured that the message has not been modified, and
-    that it really was sent by the purported originator. This underlying
-    technology is leveraged by Mojaloop to guarantee that a transaction
-    will only be committed if *both* the Payer *and* the Payee DFSPs
-    accept that it is, and neither party can repudiate the transaction.
-    Naturally, it also guarantees that no third party can modify the
-    transaction.
-4.  **The PISP API is made available through the Mojaloop Hub,** not by
-    individual DFSPs. Consequently a fintech can integrate with the Hub
-    and immediately be connected to **all** connected DFSPs. 
+1.  **A Three Phase Transaction Flow**, as follows:
+	1.  **Discovery,** when the Payer's DFSP works with the Mojaloop Hub to determine where the payment should be sent, so ensuring that transactions are not misdirected. This phase resolves an alias to a specific Payee DFSP and, in collaboration with that DFSP, an individual account.
+
+	2.  **Agreement of Terms, or Quotation,** when the two DFSP parties to the transaction both agree that the transaction can go ahead (supporting, for example, restrictions relating to tiered KYC), and on what terms (including fees), **before** either commits to it.
+
+	3.  **Transfer,** when the transaction between the two DFSPs (and by proxy their customers' accounts) is cleared, and it is guaranteed that both parties have the same, real-time view of the success or failure of the transaction.
+&nbsp;
+
+2.  **End to End Non-Repudiation** guarantees that each party to a message can be assured that the message has not been modified, and that it really was sent by the purported originator. This underlying technology is leveraged by Mojaloop to guarantee that a transaction will only be committed if *both* the Payer *and* the Payee DFSPs accept that it is, and neither party can repudiate the transaction. Naturally, it also guarantees that no third party can modify the transaction.
+3.  **The PISP API is made available through the Mojaloop Hub,** not by individual DFSPs. Consequently a fintech can integrate with the Hub and immediately be connected to **all** connected DFSPs. 
 
 **Note** In Mojaloop terms, a DFSP - or Digital Financial Service Provider - is a generic term for any financial institution, of any size or status, that is able to transact digitally. It applies equally to the largest international bank and the smallest Microfinance Institution or mobile wallet operator. "DFSP" is used throughout this document.   
 
@@ -93,4 +84,4 @@ tests.
 ## Scope
 
 This feature list is subject to amendment as the Mojaloop ecosystem
-continues to develop. Currently, it relates to Mojaloop Zambezi, Version 16.
+continues to develop. Currently, it relates to Mojaloop Congo, Version 16.
