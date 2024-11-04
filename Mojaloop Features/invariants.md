@@ -218,8 +218,8 @@ and API client.**
         tampering.
 2.  Secure Messages: JSON message content is cryptographically signed
     according to the JWS specification.
-    -   Ensures recipients that messages were sent by the party which
-        purported to send them and that provenance can not be repudiated
+    -   Assures recipients that messages were sent by the party which
+        purported to send them, and that provenance cannot be repudiated
         by the sender.
 3.  Secure Terms of Transfer: Interledger Protocol (ILP) between Payer
     and Payee participants.
