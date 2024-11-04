@@ -16,14 +16,14 @@ applied are:
     total of previously-cleared transactions since the last settlement
     activity, as either payer or payee), and any reserved funds. 
     &nbsp;
-3.  The value of a cleared transaction will be added to the DFSP's Position.
+3.  The value of a cleared transaction will be added to the payer DFSP's Position, and debited from the payee DFSP's Position.
  &nbsp;
-4.  During settlement, a negative Position will be debited from the
+4.  During settlement, for each DFSP, a negative Position will be debited from the
     Liquidity balance and transferred to the settlement partner for
     distribution to the creditors; a positive Position will be credited
-    to the Liquidity balance by the settlement partner. 
+    to the Liquidity balance by the settlement partner, using funds from the debtors. 
     &nbsp;
-5.  Successful settlement clears the value represented by the transactions in the associated settlement window/batch from the DFSP's Position.
+5.  Successful settlement clears the value represented by the transactions in the associated settlement window/batch from each DFSP's Position.
     &nbsp;
 6.  A DFSP is expected to manage their liquidity, adding to it if it
     drops to a level where anticipated transaction values will result in
