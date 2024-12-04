@@ -1,0 +1,2 @@
+# Open Banking for Fintechs Workstream
+This is the working space for the Open Banking for Fintechs workstream, to be used until there are outputs and documents ready to be merged into the main Mojaloop repos.
