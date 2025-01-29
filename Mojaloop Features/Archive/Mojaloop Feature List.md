@@ -44,8 +44,9 @@ together make Mojaloop a low cost, inclusive instant payments system:
 This document presents a feature list which covers the following aspects
 of Mojaloop:
 
--   [**Transactions**](./transactions.md), describing the use cases supported, the APIs, how
-    a Mojaloop transaction proceeds, and the aspects of a Mojaloop
+-   [**Use Cases**](./UseCases.md), describing the use cases supported by every Mojaloop deployment.
+-   [**Transactions**](./transactions.md), describing the Mojaloop APIs, how
+    a transaction proceeds, and the aspects of a Mojaloop
     transaction that make it uniquely suited to the implementation of an
     inclusive instant payments service.
 
