@@ -1,0 +1,266 @@
+﻿Pillar,Workstream (click to expand),Current Status,Description,Business Justification,Latest Update 27th February 2025,Objectives for PI 26,Acceptance Criteria,Lead (click to expand),Participants,Meeting Details,Link to Resources,Comment (click to expand)
+Pillar 1: Make Adoption Easier,Participation Tools,Active,"The overall objective of the Participation Tools workstream is to develop a “DFSP Tools” portfolio, with the intention of supporting DFSPs and SIs in the integration of the DFSP’s systems with a Mojaloop Hub. Rather than only offering semi-finalised solutions, the portfolio should comprise:
+- The tools that would be needed by either a DFSP’s developers, or by an SI engaged to carry out the integration. This would include:
+    - Mojaloop Connection Manager (MCM);
+    - Mojaloop Connector;
+    - A set of example Core Connectors;
+    - Integration Toolkit;
+    - Documentation, including “how to” guides and templates.
+- A set of exemplar implementations, ready for customisation and use by DFSPs/SIs:
+    - “Premium Service Manager”: A fully functional, Payment Manager-type service, for use by larger DFSPs. Operation of this needs significant resources; it must be hosted either in the DFSP’s existing data centre or in the cloud.
+    - “Enhanced Service Manager”: Based on the “Standard Service Manager” (below), this extends it by adding a Kafka deployment and support for bulk payments. It can be hosted in a basic server, but the Raspberry Pi option is not recommended.
+    - “Standard Service Manager”: A minimal functionality Integration Toolkit-based solution (bundled with some form of BI tool). This can be hosted in a basic server, ranging from a mid-specification server for a large MFI or a small bank, right down to a Raspberry PI for the smallest DFSPs with less rigorous service continuity requirements and lower transaction volumes. The Standard Service Manager does not support bulk payments.
+
+It should be emphasised to all DFSPs that reaping the benefits of an inclusive instant payments solution such as Mojaloop relies on the implementation of a “whole ecosystem” approach - and this means extending the reach of the Mojaloop service into the DFSPs’ domains, giving them and their customers the advantages of assurance of transaction finality, lower cost and the reliable delivery of every valid transaction.","Make it easier for different types of DFSP to join a Mojaloop-based payments scheme by reducing time, cost and complexity barriers both technically and from a business perspective.
+
+It is hoped this will foster faster growing and ultimately larger and more inclusive Mojaloop based schemes, which delivers impact in giving more people access to inclusive instant payments.","This is a busy WS. A considerable amount of work has been undertaken in creating a feature matrix to develop from a Product perspective what Mojaloop should have available to facilitate participation for different classes of DFSP/types of deployment/budget/SLAs etc.
+
+The WS has begun exploring some underlying SLA assumptions, and has identified a potential tension between an individual DFSP SLA and the overall scheme SLA. Options are being explored.
+
+Code has been shipped - the state machine for certificate signing etc, was embedded in Payment Manager, but has now been moved into the MCM Client, enabling its use by other connectivity/participation tools such as the ITK. Now in scope for smaller DFSPs.
+
+Full details of discussions/work done is available in the WS activity log: https://docs.google.com/document/d/1FCwkin-2JE4OwjVk9wb3xAjs6aDywgxTdGbg4tJJYsQ/edit?tab=t.0#heading=h.kji5b3wyrefi","See ""Description"" for the overall objectives of this workstream. For this PI, these can be boiled down to:
+- Collecting and highlighting the tools that would be needed by either a DFSP’s developers, or by an SI engaged to carry out the integration. This would include:
+    - Mojaloop Connection Manager (MCM);
+    - Mojaloop Connector;
+    - A set of example Core Connectors;
+    - Integration Toolkit;
+    - Documentation, including “how to” guides and templates.
+- Developing/making available a set of exemplar implementations, ready for customisation and use by DFSPs/SIs:
+    - “Premium Service Manager”: A fully functional, PM4ML/Payment Manager-type service, for use by larger DFSPs. Operation of this needs significant resources; it must be hosted either in the DFSP’s existing data centre or in the cloud.
+    - “Enhanced Service Manager”: Based on the “Standard Service Manager” (below), this extends it by adding a Kafka deployment and support for bulk payments. It can be hosted in a basic server, but the Raspberry Pi option is not recommended.
+    - “Standard Service Manager”: A minimal functionality Integration Toolkit-based solution (bundled with some form of BI tool). This can be hosted in a basic server, ranging from a mid-specification server for a large MFI or a small bank, right down to a Raspberry PI for the smallest DFSPs with less rigorous service continuity requirements and lower transaction volumes. The Standard Service Manager does not support bulk payments.",TBD,James Bush,"James Bush, Sam Kummary, Bonaparte Ituze, Yves Cyuzuzo, Ntare Niyomugabo, Richard Irakoze, Paul Baker, Nathan Delma, Alain Kajangwe, Myo Min Htet, ","Calls are 09:00 UTC on Thursdays
+
+Link: https://us06web.zoom.us/j/86439438236?pwd=NLK9bTmV3oIh8bwiishtjKnMzklcUf.1","#ws-participation-tools
+
+https://github.com/mojaloop/project/issues/new#workspaces/participation-tools-workstream-67adbe175d7d6700241ec0a1/board",
+Pillar 1: Make Adoption Easier,Participation Tools for Fintechs,Active,"The overall objective of this workstream is to develop a “Fintech Tools” portfolio, with the intention of supporting Fintechs and others in the integration of their systems with a Mojaloop Hub through the PISP interface. ","Make it easier for fintechs to offer services by connecting to a Mojaloop-based payments scheme by reducing time, cost and complexity barriers both technically and from a business perspective.
+
+It is hoped this will foster faster growing and ultimately larger and more inclusive Mojaloop based schemes, which delivers impact in giving more people access to inclusive instant payments.","Little activity for last few weeks - the WiredIn and RSwitch teams have been on a sprint to launch eKash (P2M) in Production, plus UATs with DFSPs, for RNDPS V2.","-      Develop and document the API specifications for Payment Initiation services. Explore and extend the mojaloop/thirdparty-sdk
+-      Implement secure authentication and authorization mechanisms to protect user data and ensure compliance with financial regulations. Explore and extend the mojaloop/auth-service
+-      Create and MVP/Pilot application to validate the functionality and security of the open banking APIs.
+Test with select financial institutions and Fintechs.","'-      API meets the functional requirements as specified in the API documentation
+-      Compliance with PSD2, and/or other specific open banking regulations
+Successful system integration and functionality testing with at least 1 financial institution, and 1 non-banking institution (FinTech, PISP, Payment/Bill Aggregator, …)",Alain Kajangwe,"Alain Kajangwe,
+WiredIn Team, Aimable Rukundo,
+Yvan Rugwe, James Bush, Mohamed Maalim, Ntare Niyomugabo,
+Paul Makin","Fortnightly on Wednesday, 13:00 UTC
+
+https://meet.google.com/gep-emni-ebp?hs=224","#ws-participation-for-fintechs
+
+https://github.com/mojaloop/project/issues/new#workspaces/open-banking-for-fintechs-67910f176c5a5b0024db7bd4/board",
+Pillar 1: Make Adoption Easier,Deployment Tools - Maintenance,Active,"This workstream is concerned with the provision of tools, documentation and support to enable adopters to deploy the Mojaloop software in a variety of environments, cloud and on-premises.
+","Allow adopters to deploy easily, in the environment of their choice, and with minimal support from the Community.
+
+Providing a well documented, comprehensive suite of tools that enable adopters to engage with, develop, test, evaluate and operate our software is critical to supporting the establishment and long term sustainability of Mojaloop based IIPS.","This WS has been slow to start this PI, due to resource constraints, but there has been good progress in last few weeks. Specifiying deployment options for a wide variety of scenarios: see feature matrix (type of user vs type of deployment)
+
+This allowed the identification of 4 classes of deployment. Began to explore these four, to define their characterisitcs, tooling, SLAs etc. Have now got these all defined, and are working to identify which aspects we have/the gaps
+
+Next steps: fill the gaps, add documentation, add engineering items into the WS board.
+
+The WS activity log records all details of each WS meeting: https://docs.google.com/document/d/1XiwU8nVM4pgU_bLl6aVOy1yR_Pd3M1Ei_FpbuBZAGu4/edit?tab=t.0#heading=h.637kfoc3xw6m","During this PI, the WS aims to complete the refactoring of IaC. The aim is ultimately to make IaC significantly easier to use, as well as to develop a set of ""profiles"" to configure IaC for different environments (the intention being that adopters/SIs can customise those profiles - which are only a starting point - for their particular circumstances. 
+
+This is to be accompanied by proper user documentation, allowing any competent SI/adopter to understand, customise and use IaC.",,James Bush,"James Bush, Sam Kummary, David Fry, Luis Roy Zulu,
+Tony Williams, Pye Aung, Nathan Delma, Callum McDonald
+","09:00 UTC on Tuesdays
+
+Link: https://us06web.zoom.us/j/89082713533?pwd=iG4WOPT2nrFH9pKAU55jGraHYYGbWw.1","#ws-deployment-tools
+",
+Pillar 2: Achieve Scale,Dispute Management,Active,"We aim to develop a Dispute Management solution that can be integrated with the Mojaloop Core and connected DFSPs to meet the needs of Hub Operators and participating DFSPs, across the full range of deployment types.","Multiple adopters have asked about our dispute management solution. This is an answer. Off the shelf versions generally assume that switches operate like Visa, or ACI, or whatever - no agreement of terms, so plenty of opportunity for dispute. A solution which emphaises that if there's a problem it lies with the DFSPs is of advantage to us.","Defined a framework for disputes within one scheme, two participants. Need to expand this to three or more, and cross-border/multi-scheme.
+
+Next decision: are we building from scratch, or adapting existing solutions. Hosting a workshop with adopters to explore the framework, and the build options. Also working with Paul Baker to refine the framework.
+
+Also intended to get other adopters to join the WS, and to get them to contribute their views.
+
+Build/adapt decision by the end of this PI.","1. Identify and collate all of the requirements for a dispute management service/system from engaged/disparate members of the Community, with an emphasis on operators and deployers
+2. Develop technical design and process flows of the service, and review the technical design with the Design Authority
+3. Develop a prototype to a high degree of completion, fit for a pilot 
+","1. Requirements reviewed with Product Council members and other stakeholders
+2. DA acceptance of technical design
+3. Hub operator engaged in principle to conduct pilot/PoC, with the aim of eliciting further requirements for the next PI 
+",Promesse Ishimwe,"Promesse Ishimwe, Paul Makin ","Thursdays, 13:00 UTC","#ws-dispute-management
+
+https://github.com/mojaloop/project/issues/new#workspaces/dispute-management-67aa1aa7b4aefe000fc4f3bd/board",
+Pillar 2: Achieve Scale,PISP V2.0 Implementation,Active,"The current PISP implementation requires refactoring to meet the general needs of adopters and fintechs, rather than supporting only one way of working. This will require complementary changes at the Hub and the Mojaloop Connector, and is expected to support continuing authorisation at the DFSP.
+
+The refactored PISP interface will also support bulk payment initiation by a fintech, offering for example outsourced salary processing service.
+
+This workstream needs to be completed before the proposed changes to bulk payments/PISP  are undertaken.
+
+Enhancements to support AISP will follow in a future PI.","Generalising Mojaloop's PISP implementation to support business models other than that of Google, the sponsor of the original implementation.","Some work has been done. This is an important WS - or will become so in the near future, when people begin to explore. 
+
+We need to keep it moving forward, and prepare so it's ripe for adoption as and when needed. Objectives are not difficult, still believe it's achievable within this PI.
+
+Design is complete, ready for review by DA, do it in the next two weeks (other priorities). Can then incorporate it into PISP 2.0. Then need to incorporate PISP 2.0 into the Core. Need to write/develop Epic for this.","- Define and document changes to PISP to support refactoring and bulk
+- Present changes to DA for review/acceptance
+- Implement the changes, and work towards their integration into Mojaloop Limpopo, V18.0.0
+","1. Verify that a design for PISP v2.0 and the inclusion of bulk in the PISP is completed and documented.
+2. Verify that these designs are presented at the DA for review.
+3. Write up the epic/s with story outline to describe the work required and acceptance criteria for this implementation.
+",Paul Baker,"Paul Baker
+Michael Richards
+",,#ws-pisp2_0,
+Pillar 2: Achieve Scale,LEI Addressing,Active,"This workstream is focussed on supporting domestic and cross-border merchant transactions through the adoption of the international LEI identifier. This workstream is a collaboration between the Mojaloop Foundation and GLEIF, and is intended to culminate in a pilot, in cooperation with a Mojaloop adopter.","Collaboration with GLEIF has strategic advantages for us; it has the backing of the financial sector's ""establishment"" - the FSB and the G20.
+
+It also helps our crediblity in cross-border merchant payments, and complements our work in ISO 20022 by helping introduce LEIs into the Mojaloop ecosystem.",No update.,"1. Definition of a comprehensive addressing framework for payments that covers both merchant and other cross-border payments
+2. Pilot of LEI-based merchant payments
+    a. Mojaloop Merchant Registry enhanced to support LEI capture OR LEI registration for small merchants
+    b. LEI registration cost linked to merchant status/size
+    c. Identify LoU for pilot
+    d. Identify validating agent - Mojaloop scheme operator or DFSP/acquirer
+3. Identify role for vLEI
+    a. vLEI as supply chain risk management for hub operator
+    b. Signing of address resolution result - interscheme (non-Mojaloop) (see interscheme workstream)","1. Review of framework by the DA, development of an implementation plan
+2. Launch of pilot to demonstrate LEI-led merchant payments using QR, plus registration of small merchants for LEI
+",Clare Rowley,"Clare Rowley, Ololade Osunsanya, Julie Guetta, Paul Makin",To be confirmed.,#ws-lei-addressing,
+Pillar 2: Achieve Scale,Refactor Bulk Payments,Not Yet Begun,"The current implementation requires collaboration between the Mojaloop Connector and the Hub; the MC takes a payments list, uses Get /Parties to identify the DFSP for each entry payee, and assembles sub-lists (one per DFSP). These lists are then processed using /bulkQuotes and /bulkTransfers, with a single transfer per DFSP. The payee MC then passes the complete list to the payees’ DFSP, via the Core Connector.
+
+As this functionality is implemented in the MC, it is available to Payment Manager (which uses MC). However, although the lightweight Integration Toolkit (ITK) also uses MC, it cannot support this bulk technology, as it does not include a Kafka deployment - which the bulk implementation in MC relies on.
+
+It was proposed therefore to move this bulk orchestration functionality into the Hub. However, this has now been rejected, because (1) it would impose a significant burden on the Hub, and (2) the overhead of multiple Get /Parties from the MC is not that great - since even if the Hub did them, the Hub would have to do multiple ALS requests anyway (there is no bulk functionality for lookups).
+
+Although this would mean that a DFSP using the ITK would be unable to initiate bulk payments, this is not currently felt to be an issue. Such a DFSP is expected to be a small MFI, and is therefore unlikely to be using bulk payments - or if it is, they will be to lists of <100, and individual transfers would be adequate for that.
+
+Further, this issue can be further ameliorated by implementing an extended version of the ITK, which would include a Kafka deployment or other message queueing technology, for use by small/medium DFSPs.
+
+So the requirements for this workstream are defined as:
+- Consider the definition and implementation of a bulk version of GET /Parties, from the CM to the Hub, and from the Hub to the ALS.
+- Coordinate with the Participation Tools workstream on the development of an extended form of the ITK which includes Kafka or other message queueing technology.
+- On the payee side, review the possibility of providing the option of (instead of passing a payments list to the DFSP) breaking it down into individual transactions, for use by small DFSPs that may not be able to process a payments list. Consider the options for this “de-multiplexing” using the Redis backend.
+- Finally, implement bulk payments over the PISP interface - though this must be delayed until the PISP APIs have been refactored.
+","(Crossover with Participation Tools) Make sure that bulk payment initation is available to as many types of DFSP as practicable. The trade off is at the bottom end; does a small DFSP go with the cheapest participation solution, which doesn't support bulk, or a more expensive one, which does?",Not applicable,"- Conduct and document investigations and design work, as above
+- Present changes to DA for review/acceptance
+- Implement the changes, and work towards their integration into Mojaloop Limpopo, V18.0.0","1. Verify that there is a bulk Get Parties design that includes a sequence diagram with example payloads; that is presented to the FSPIOP CCB. (The design must align with ISO 20022 message payload standards.)
+2. Document the ITK requirements for payer DFSP side bulk support; that is an outcome from the discussions with participation tool workstream.
+3. Verify that there is a bulk payment payee DFSP de-multiplexing design that uses Redis. This should include a sequence diagram with example payloads and redis functional references.
+4. Verify that a bulk PISP design is provided for review.
+",Paul Baker,"Paul Baker
+",,#ws-bulk,Not expected to begin until mid-PI.
+Pillar 2: Achieve Scale,"FX Refinement
+",Not Yet Begun,"Develop the existing FX capabilities further to support more business models. To include multiple FXPs (plus functionality to choose between them), support for intermediate currencies, and payee-initiated FX rather than payer-initiated.","Support a broader range of business models for FX services cross-border, including: multiple FXPs; the ability to select an FXP for an individual transaction; and allowing the payee to select the FXP, rather than the payer.",Not applicable,TBD,"TBD
+",Paul Baker,"Paul Baker
+",,"#ws-fx-refinement
+",
+Pillar 3: Connect to other Systems,ISO 20022 Refinement,Active,This workstream focusses on refining the ISO 20022 implementation released with Mojaloop V17.0.0 based on the experiences of adopters.,"Initially important for the COMESA project, now extending to support others. A good quality Market Practice document would facilitate further adoptions.","There has been limited progress. Currently reformatting the Market Practice doc to match market expectations. It needs extending; needs some details/additional commentary. It must include a detailed explanation of the working of ILP, for example.
+
+Hope to get this completed ""soon"" - probably by end of the PI. 
+
+Remember that this is only needed for interconnection to non Mojaloop schemes.
+
+Just about to submit our revised messages to ISO for agreement of terms.","- Update the market standard practice document 
+- Update the messages standards ",TBD,"Paul Baker
+Julie Guetta","- Mojaloop Foundation team 
+- Paul Baker 
+- IPSL? ",On demand,#ws-iso20022,Not expected to begin until mid-PI.
+Foundation: Quality Product,"Mojaloop Evolution
+",Active,"Replacing the accounting ledger functionality at the heart of Mojaloop with TigerBeetle. 
+
+Replace the heart of the settlement engine with TigerBeetle functionality (Settlement V3).
+
+Feature, Component, and Principle Migration of the outputs of the vNext workstream into the Mojaloop codebase.","Strategic importance; TigerBeetle is the next gen ledger technology developed specifically with Mojaloop in mind.
+
+With regard to vNext, it's important that we do not waste the investment. There are key elements of vNext that we would like to integrate into the vNext codebase, including the portals and the IAM implementation. ","There has been agreement in TGB on TigerBeetle (TB) accounting, so we're using TB in most efficient/performant manner. Awaiting final agreement at the next TGB. Will proceed on that assumption.
+
+Lewis Daly (LD) of TB will be dedicated to the integration, working with the Mojaloop team. LD producing a proposal for the architecture of the integration. Presenting to DA next week - then at TGB the week after. Hoping we'll be able to demo an integrated version (PoC only!) at the Accra convening.
+
+Also need to consider ancillaries issues around administration and reporting (across TB and MySQL),  integrated into a separate reporting database.","- Unlock greater throughput per hardware unit by refactoring clearing position handlers and transfers data stores around TigerBeetle becoming the fundamental accounting ledger implementation for Mojaloop going forward.
+- Analyse the outputs of the vNext workstream and develop a prioritised list of features to merge into the current release branch.
+- Detail work items in github for the highest priority features.
+- Begin merge of highest priority features.","For TigerBeetle:
+1. All Mojaloop accounting ledger storage in distributed TigerBeetle clusters.
+2. Fleet of horizontally scalable, stateless kafka stream handlers processing clearing requests into TigerBeetle ledgers.
+3. Fully redundant, active-active pattern with strong consistency and synchronous data replication guarantees.
+4. All liquidity check functionality delegated to TigerBeetle cluster.
+5. Transfer meta-data stored in a strongly consistent horizontally scalable distributed database.
+6. Initial implementation to achieve greater performance per hardware unit to current RDBMS backed ledger.
+7. TB Settlement integration
+For vNext elements:
+1. TBD",James Bush and Michael Richards,"James Bush, Michael Richards, Joran Greef, Sam Kummary",,#ws-mojaloop-evolution,
+Foundation: Quality Product,Performance Optimisation,Active,"Demonstrate the performances of Mojaloop in a variety of deployment configurations, and develop and publish a whitepaper. Use a baseline on-premises configuration to measure changes in performance between Mojaloop releases.",A whitepaper that demonstrates how Mojaloop exceeds the performance requirements of adopters would be a valuable tool for the GTM team.,"No update.
+This WS was a late starter, and only kicked off on 24th February, shortly before this status update.","- Publish a whitepaper on Mojaloop performance with deployment recommendations. 
+- Establish a performance benchmark for future comparison ","- Establish a testing protocol. 
+- Conduct tests in labs, both on-premises and in the cloud, using one or two providers such as GCP and AWS. 
+- Publish a first version of the whitepaper. 
+- Being able to detect performance degradation between Mojaloop releases",James Bush,"- Mojaloop team 
+- Infitx 
+- Thitsaworks 
+- Higala 
+ ",Fortnightly on Tuesday at 9AM UTC ,"#ws-performance 
+https://github.com/mojaloop/project/issues#workspaces/performance-workstream-67bc46e95602c3000f4b329a/board
+Working notes:
+https://docs.google.com/document/d/1-_-4N_6BFEWDjr4ODIYvID3RUABw1e3wmk6ZlpYTs48/edit?tab=t.0#heading=h.637kfoc3xw6m",Began 24th February 2025
+Foundation: Quality Product,Platform Quality and Security,Active,"Assessment, maintenance and enhancements to security and quality of the Mojaloop platform, encompassing connectivity to participating DFSPs (including transactions) and the security of hub operator portals, and of the Mojaloop Open source codebase and related artefacts. ","Emphasis on ensuring and extending the quality, security and reliability of the Mojaloop platform.","Significant achievements, primarily focussed on hardening and improving quality. These are:
+
+- SBOM for components and Mojaloop platform
+- Hardening of Mojaloop releases 
+- Auditing in Mojaloop - Requirements, design discussions in PI26
+- Address deprecated libraries / packages in core services
+- Improve tooling used in CI/CD (including CI tools, License checkers, and SBOM inclusion for all repositories
+- Blog posts and guidance to implementers and improve documentation
+- Update license files in repos 
+- Stress / Load testing of Mojaloop 
+- Candidate: Provenance of Mojaloop artifacts
+- Review and followup SonarCloud
+
+Another objective this PI is to achieve OpenSSF badge for Mojaloop
+","1. Auditing in Mojaloop - Review current state, requirements, design
+2. Address deprecated packages in core services
+3. Improve tooling used in CI/CD: CI tools, License checkers, SBOM inclusion for all repositories
+4. Blog posts and guidance to implementers and improve documentation
+5. Update license files in repos - completion
+6. OpenSSF checklist and compliance
+7. Bonus: Stress / Load testing of Mojaloop
+8. Bonus: Provenance of Mojaloop artifacts","1. The existing state of auditing in Mojaloop (provided by default) is reviewed and requirements confirmed for the next iteration to address gaps. Design confirmed with DA
+2. Mojaloop releases quality improvement - deprecation issues addressed.
+3. CI tooling in Mojaloop is reviewed, tools to be upgraded to latest versions
+4. Mojaloop repositories are reviewed to confirm main branch protection rules, license files / branding
+5. OpenSSF branding explored and achieve compliance (even if the badge itself is not achieved)",Sam Kummary,"Devarsh Shah
+Juan Correa
+Paul Baker
+Sam Kummary
+Shashi Hirugade
+Shuchita Prakash
+Walter 
+2+ contributors from Upanzi Network / Cylab / CMU (TBD)
+And other volunteers, part-time contributors","Wednesdays, 12:30 UTC
+https://us06web.zoom.us/my/samkummary ","#ws-pqs-pi26, link: https://mojaloop.slack.com/archives/C06UW0E2KBN ",
+Foundation: Quality Product,Core and Releases,Active,"The Mojaloop Core and Releases workstream aims to maintain the Mojaloop core (maintenance items such as fixes to critical bugs, prioritized feature enhancements, node upgrades) and undertakes the Release process of the core services and some adjacent services or products that are part of the Mojaloop Platform.
+
+The workstream also aims to support technical workstreams delivering features to core or supporting services by helping package services that are of release quality (the new features need to follow Mojaloop’s adopted quality standards and best practices such as automated tests, documentation, helm charts and such). This involves the community support aspect as well.",Mojaloop release control. A fundamental activity.,"Getting close to v17 release. Current status:
+
+■ Dev release - default mode - GP tests passing 100%
+■ Dev release - default mode - Interscheme tests passing 100%
+■ Dev release - iso20022 mode enabled - GP tests passing 100%
+■ Dev release - default mode - Interscheme disabled - 12 failures in GP tests
+■ Dev release - default mode - config change: bulk collection failing - 337 total: 119:
+218 pass:fail (Bulk scenario passing as of last 24hrs)
+■ Dev release - default mode - config change: third-party collection - passing 100%
+■ Continuing with the release checklist: on-us transfers, CGS testing, SDK testing
+
+A release candidate (RC) or dev release is available for early testing. Once the release checklist is complete, this will be released","1. Publish Mojaloop v17
+    a. PRs review 
+    b. QA, testing
+    c. Bug fixes
+    d. Deprecated issues addressing
+    e. FX
+    f. ISO 20022 support
+    g. Interscheme and Proxy support
+2. IaC release supporting v17
+3. Hardening Mojaloop releases
+4. Run a performance test on a Mojaloop deployment (deployed with IaC) and note observations
+5. Bonus: Finance Portal testing improvements and quality improvements","1. Mojaloop version 17.0.0 Irrawaddy is published.
+2. An IaC version supporting Mojaloop v17 is published
+3. Sandbox, dev/qa environment capability to deploy v17 on demand (and test) is developed
+4. Quality improvements made to releases and services based on PQS PI25 outcomes
+5. Capability to setup and run a performance test on Mojaloop v17 sandbox is delivered
+6. Finance Portal testing improvements made and gaps addressed (or backlog items added)",Sam Kummary,"Devarsh Shah
+Juan Correa
+Paul Baker
+Sam Kummary
+Saeed Hassan
+Shashi Hirugade
+Shuchita Prakash
+Walter 
+And other volunteers, part-time contributors","Day: Mondays
+Time: 3pm UTC; Team check-ins 2-3 times weekly and slack updates
+Link: https://us06web.zoom.us/my/samkummary ","#ws-ml-core-and-releases-pi26, link: https://mojaloop.slack.com/archives/C06VB2FHUER",
